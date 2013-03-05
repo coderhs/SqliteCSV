@@ -8,6 +8,7 @@ class SqliteCSV
     @final_location = final_location
   end
 
+
   def export()
     @db[:sqlite_sequence].each do |test|
       file = CSV.open("#{@final_location}/#{test[:name]}.csv",'w')
